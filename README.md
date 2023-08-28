@@ -2,13 +2,22 @@
 
 ## Description
 
-# This project is a decentralized stable coin on the Ethereum blockchain written in solidity. 
-    
-# This coin has a relative stability, anchored/pegged to the US dollar: $ 1.00
+### This project is a decentralized stable coin on the Ethereum blockchain written in solidity.
+
+### This coin has a relative stability, anchored/pegged to the US dollar: $ 1.00
+
     1. Chainlink Price feed.
     2. Set a function to exchange ETH & BTC for the stable coin.
-# The stability mechanism (Minting) is algorithmic (decentralized)
+
+### The stability mechanism (Minting) is algorithmic (decentralized)
+
     1. People can only mint the stablecoin wit enough collateral.
-# The collateral of this currency is exogenouns: ETH and BTC
+
+### The collateral of this currency is exogenouns: ETH and BTC
+
     1. wETH
     2. wBTC
+
+## Useful DeFi Links, Summaries:
+
+https://academy.shrimpy.io/course-overview/a-beginners-guide-to-decentralized-finance-defi
