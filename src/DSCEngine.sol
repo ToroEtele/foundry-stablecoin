@@ -132,13 +132,28 @@ contract DSCEngine is ReentrancyGuard {
 
     // ! External Functions
 
-    function depositCollateralAndMintDsc() external {}
+    /*
+     * @param tokenCollateralAddress: The ERC20 token address of the collateral you're depositing
+     * @param amountCollateral: The amount of collateral you're depositing
+     * @param amountDscToMint: The amount of DSC you want to mint
+     * @notice This function will deposit your collateral and mint DSC in one transaction
+     */
+    function depositCollateralAndMintDsc(
+        address tokenCollateralAddress,
+        uint256 amountCollateral,
+        uint256 amountDscToMint
+    ) external {
+        depositCollateral(tokenCollateralAddress, amountCollateral);
+        mintDsc(amountDscToMint);
+    }
 
     function burnDsc() external {}
 
     function liquidate() external {}
 
     function redeemCollateralForDsc() external {}
+
+    // ! Public Functions
 
     /*
      * @param tokenCollateralAddress: ERC20 token address of the collateral you're depositing
