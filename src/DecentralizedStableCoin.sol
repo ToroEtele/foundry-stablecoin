@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.18;
 
@@ -46,7 +46,10 @@ contract DecentralizedStableCoin is ERC20Burnable, Ownable {
      * @param _to: address where the tokens are minted
      * @param _amount: amount of DSC to be minted
      */
-    function mint(address _to, uint256 _amount) external onlyOwner returns (bool) {
+    function mint(
+        address _to,
+        uint256 _amount
+    ) external onlyOwner returns (bool) {
         if (_to == address(0)) {
             revert DecentralizedStableCoin__NotZeroAddress();
         }

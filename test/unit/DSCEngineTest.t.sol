@@ -46,6 +46,21 @@ contract DSCEngineTest is Test {
         ERC20Mock(wbtc).mint(user, STARTING_USER_BALANCE);
     }
 
+    // ! Constructor Tests:
+
+    function testRevertsIfTokenLengthDoesntMatchPriceFeeds() public {
+        tokenAddresses.push(weth);
+        feedAddresses.push(ethUsdPriceFeed);
+        feedAddresses.push(btcUsdPriceFeed);
+
+        vm.expectRevert(
+            DSCEngine
+                .DSCEngine__TokenAddressesAndPriceFeedAddressesAmountsDontMatch
+                .selector
+        );
+        new DSCEngine(tokenAddresses, feedAddresses, address(dsc));
+    }
+
     // ! Price Tests:
 
     function testGetUsdValue() public {
