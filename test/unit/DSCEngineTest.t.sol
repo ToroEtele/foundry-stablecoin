@@ -47,6 +47,8 @@ contract DSCEngineTest is Test {
     }
 
     // ! Constructor Tests:
+    address[] public tokenAddresses;
+    address[] public feedAddresses;
 
     function testRevertsIfTokenLengthDoesntMatchPriceFeeds() public {
         tokenAddresses.push(weth);
