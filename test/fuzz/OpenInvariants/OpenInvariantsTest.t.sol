@@ -1,6 +1,6 @@
-// // SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 
-// pragma solidity 0.8.19;
+pragma solidity 0.8.19;
 
 // // 1. Total supply of DSC should be less than the total value of collateral
 // // 2. Getter view functions should never revert
